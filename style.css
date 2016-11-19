@@ -1,239 +1,413 @@
 @import url(reset.css);
-@import url(ramka.css); 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Merienda One');
 
-
-html {
-    background: #ffc107 url(assets/tlo.jpg) fixed no-repeat;
-    background-size: contain;
-    font-size: 62.5%;
-    font-family: 'Playfair Display', serif;
-    color: color: #48504e;
+html{
+background: #fb9d23;
+background: -moz-linear-gradient(top,#fb9d23 0%, #ffc578 100%); 
+background: -webkit-linear-gradient(top,#fb9d23 0%,#ffc578 100%); 
+background: linear-gradient(to bottom,#fb9d23 0%,#ffc578 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb9d23', endColorstr='#ffc578',GradientType=0 );
+font-size: 62.5%;
+font-family: 'Raleway', sans-serif;
+color: color: #48504e;
 }
 
-.orange { color: #ffc107; }
+.darkred { color: #840a10; }
 .grey { color: #48504e; }
 .lightgrey { color: #d4d4d3; }
 
+body {
+font-size: 1.7rem;
+}
+
+/*Headers*/
+
+h1,h2,h3{
+font-family: 'Merienda One', cursive;
+}
+
 h1 {
-    font-size: 3.7rem; 
-    background-color: rgba(255, 255, 255, .9);
-    padding: 3.5rem;
-    margin: 4.0rem;
-    display: inline-block;
-    border-top-left-radius: 2.0rem;
+font-size: 4.8rem;
+color: #840a10;
+text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+margin-top: -7.0rem;
+margin-bottom: 7rem;
+text-align: center;
 }
 
-h2 { font-size: 2.7rem; }
-
-h3 { font-size: 3.1rem; }
-
-h3, h2 { 
-    color: #fff; 
-    background-color: #48504e;
-    padding: 1.5rem;
-    display: inline-block;
+h2{
+font-size: 3.8rem;
+text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+text-align: center;
+padding-top: 4rem; 
+padding-bottom: 4rem;
+clear: both;
 }
 
-h4 {
-    font-size: 2rem;
-    padding: 2rem 1rem;
+h3{
+font-size: 2.6rem;
+color:darkmagenta;
+text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+padding-top: 1rem;
+clear: both;
 }
 
-p { font-size: 1.8rem; line-height: 1.55; }
+/*Logo*/
 
-ul { font-size: 2.3rem; line-height: 1.75;  }
-
-footer p { font-size: 1.4rem; color: #d4d4d3;}
-
-strong {
-    font-weight: bold;
+#logo {
+text-align: center;
 }
 
-em {
-    background-color: rgba(255, 255, 255, .8);
-}
+/*Navi*/
 
-.summary { 
-    font-size: 2.4rem;
-    font-style: italic;
-}
-
-.dot {
-    width: 1rem;
-    height: 1rem;
-    background-color: #48504e;
-    margin: 3rem auto;
-    border-radius: 2rem;
-}
-
-.deleted {
-    text-decoration: line-through;
-}
-
-.button-more {
-    display: inline-block;
-    border: 1px dashed #000;
-    font-size: 3rem;
-    padding: 1rem 1.5rem;
-    text-decoration: none;
-    position: absolute;
-    right: 0;
-}
-
-header {
-    display: none;
-    background: #48504e;
-    color: #fff;
-    height: 30rem;
-    padding: 10rem;
+#wrapper {
+max-width:100%;  
+margin: 0 auto;
 }
 
 nav {
-    float: right;
-}
+display: flex;
+justify-content: center;
+flex-wrap: nowrap;
 
-nav li {
-    text-align: right;
-    background: url(assets/strzalka.svg) right no-repeat;
-    padding-right: 4rem;
-    line-height: 1.5rem;
-    margin: 3rem;
 }
-
-form {
-    float: left;
-    width: 45rem;
+#menu ul {
+list-style-type: none;
 }
-
-input, textarea {
-    width: 35rem;
-    background: none;
-    border: 2px #d4d4d3 solid;
-    margin: .5rem;
-    padding: 1rem;
-    color: #fff;
-    font-size: 1.7rem;
-}
-
-button {
-    background: #ffc107;
-    border: none;
-    padding: 2rem 6rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    float: right;
-    cursor: pointer;
-    margin-top: -1.5rem;
-    margin-right: -3rem;
+#menu li {
+float: left;
 }
 
 
-.menu {
-    background: #fff url(assets/menu.svg) center no-repeat;
-    padding: 1rem;
-    margin: 1rem;
-    height: 3.2rem;
-    position: fixed;
-    width: 3.2rem;
-    right: 0;
-    z-index: 9999;
+.pozmen {
+display: block;
+min-width:15rem;
+padding:1.8rem;
+margin:0rem 0.5rem 5rem 0rem; 
+background-color:darkslategrey;
+color:#fff;
+font-size: 2.2rem;
+text-decoration: none;
+border-radius: 50px;
+text-align: center;
 }
 
-.hoverme:hover header {
-    display: block;
+.pozmen:hover{
+color:darkslategrey;
+background-color:antiquewhite;
+font-weight: 800;
 }
 
 
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 1rem;
-    background: #fff;
-    z-index: 6;
-}
+
+/*Section*/
 
 section {
-    width: 50%;
-    min-width: 600px;
-    max-width: 850px;
-    position: absolute;
-    right: 5%;
+max-width: 76%;
+margin: 0 auto;
 }
 
-article {
-    margin-bottom: 6rem;
+/*Figure*/
+
+figure{
+margin: 0px;
 }
 
-hgroup {
-    margin-left: -25%;
-    position: relative;
-    display: inline-block;
+/*Informacje*/
+
+#informacje img{
+width: 30%;
+padding-left: 2rem;
+padding-bottom: 5rem;
+float: right;
 }
 
-h3 {
-    position: absolute;
-    right: 0;
-    bottom: 5%;
+#informacje li {
+    list-style:square;
+    list-style-position: outside;
+    line-height: 2.2rem;
 }
 
-figure {
-    margin-left: -25%;
-    margin-top: 20%;
-    float: left;
+#informacje ul {
+    margin-left: 2rem;
 }
 
-.text {
-    padding-top: 4rem;
-    column-count: 2;
+p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-content: center;
+}
+
+.nagrody {
+    padding-bottom: 5rem;
+    text-align: center;
 }
 
 
-@media all and (max-width: 1280px) {
-    
-    html {
-         background: #ffc107;
-    }
-    section {
-        width: 75%;
-    }
-    
-    .bg {
-        background: url(assets/bg.jpg) fixed no-repeat;
-        height: 300px;
-    }
+/*Tabela Wydarzenia*/
+
+th, td {
+    padding: 10px;
+    text-align: center;
     
 }
 
-@media all and (max-width: 768px) {
-    hgroup {
-    margin-left: 0;
+thead th {
+    text-align:center;
+    font-weight: 800;
 }
-    figure {
-        display: none;
+
+tbody tr:nth-of-type(odd) {
+    background-color: bisque;
+}  
+
+/* Kontakt*/
+
+.text-cont {
+max-width: 50%;
+float:left;
+padding:1rem;
+}
+
+.form-cont {
+width:40%;
+display: block;
+padding:1rem;
+float: right;
+}
+
+.container {
+margin-top: 1rem; 
+}
+
+.form {
+width:100%;
+padding: 1rem;
+}
+
+.label {
+font-weight: bold;    
+}
+
+.button {
+font-size: 2rem;
+padding: 1rem;
+width: 10rem;
+}
+
+/*Footer*/
+
+footer {
+    text-align: center;
+    height:10rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    background-color:darkslategrey;
+    color:beige;
+    display: block;
+    clear: both;
+    
+}
+footer p {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }  
+    footer img {
+        width: 5rem;
     }
-    section {
-    width: 90%;
-    min-width: 300px;
-    right: 5%;
-}
-    .text {
-    column-count: 1;
-}
+
+/*RESPONSIVE 768*/
+@media (max-width: 780px) {
+
+    /*Logo 768*/
+
+#logo img {
+text-align: center;
+width:70%;
     
 }
 
+/*Navi 768*/
+
+#wrapper {
+max-width: 100%;        
+    }    
+#menu {
+margin:0;
+width:100%;
+
+}   
+#menu li {
+display: inline-block;
+min-width: 49.5%;
+}
+
+    
+.pozmen {
+margin-bottom:0;
+margin-right: 0rem;
+margin-left: 0.5rem;
+margin-bottom: 0.5rem;
+    }    
+/*Section 768*/
+
+section {
+max-width: 90%;
+margin: 0 auto;
+}
+
+h1 {
+font-size: 3.2rem;
+margin-top: -7.0%;
+margin-bottom: 7rem;
+text-align: center;
+}
+    
+#informacje img{
+width: 100%;
+
+padding-top: 2rem;
+padding-bottom: 2rem;
+} 
 
 
+/*Formularz  768 */ 
+.text-cont {
+max-width: 100%;
+}
+
+.form-cont {
+min-width:100%;
+}
+
+.form {
+width:98%;
+padding: 1rem;
+font-size: 1.8rem;
+}
+
+    /*Stopka  768 */ 
+footer {
+    
+}
+
+ 
+    /* Tabela Wydarzenia 768*/
+tr,td {
+        display: block;
+		width: 97%;
+        padding: 1rem;
+        text-align: left;
+			}  
+
+      thead {
+		display: none;
+	  	}
+  
+    	td[data-header-title]:before {
+			content: attr(data-header-title)':';
+            display: block;
+            font-weight: 800;
+            float:left;
+            width:100px;
+            //text-align: left;
+      }
+      tbody {
+            border-collapse: collapse;
+            display:block;
+      }
+      tbody tr {
+            margin-bottom:2rem;
+            border-bottom: 1rem solid #222222;
+            display:block;
+     }
 
 
+/*RESPONSIVE 480*/
+    @media (max-width: 480px) {
+    
+        /*Navi 468 */
+        section {
+        max-width: 96%;
+        margin: 0 auto;
+        }
+        
+        #menu li {
+        float: none;
+        min-width: 100%;
+          }
+          
+        .pozmen {
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+          }
+        
+        /* Tabela Wydarzenia 768*/
+        tr,td {
+		width: 92%;
+			}  
 
+      thead {
+		display: none;
+	  	}
+  
+    	td[data-header-title]:before {
+            float:none;
+           
+      }
+      tbody {
+            border-collapse: collapse;
+            display:block;
+      }
+      tbody tr {
+            margin-bottom:2rem;
+            border-bottom: 1rem solid #222222;
+            display:block;
+            
+     }
+        
+        /*Formularz  480 */ 
+        .text-cont {
+        max-width: 100%;
+        }
 
+        .form-cont {
+        min-width:96%;
+        }
 
+        .form {
+        width:94%;
+        padding: 1rem;
+        font-size: 1.8rem;
+        }
+        
+        
+        #logo img {
+        text-align: center;
+        width:90%;   
+        }     
 
+        h1 {
+        font-size: 150%;
+        margin-top: -8.0%;
+        margin-bottom: 2rem;
+        text-align: center;
+        }
+        
+      
+        h2{
+        font-size: 3.8rem;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding-top: 2rem; 
+        padding-bottom: 2rem;
+        }
 
+          div.nagrody img {
+            width:85%;
 
-
-
-
-
+    }
+    
+        
+    }
